@@ -1,0 +1,21 @@
+/* Form Layout */
+.form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30vh;
+  height: 370px;
+  width: 70vw;
+  margin-left: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  background-color: $white;
+}
+.form__container {
+  display: flex;
+  flex-direction: column;
+}
+.form__button {
+  padding-top: 0.5rem;
+  text-align: center;
+}

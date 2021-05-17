@@ -1,0 +1,10 @@
+.texto-nav {
+    font-family: 'Lobster', cursive;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-indicators li {
+    height: 10px;
+}
