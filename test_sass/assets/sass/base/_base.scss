@@ -7,6 +7,12 @@ body {
   background-position: 80%;
 }
 
+@media (min-width: 768px) {
+  .body {
+    padding-top: 0.1rem;
+  }
+}
+
 a:hover {
   color: peru;
 }

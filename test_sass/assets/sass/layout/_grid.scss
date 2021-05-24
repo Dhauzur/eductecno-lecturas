@@ -1,0 +1,111 @@
+
+        .item {
+            border: 1px solid black;
+            font-family: monospace;
+            font-size: 3rem;
+            background-color: gold;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 3px 40px;
+        }
+
+        .container {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1170px;
+            }
+        }
+
+        /* .item-1 { */
+        /* grid-column-start: 4; */
+        /* grid-column-end: 6; */
+        /* El end 4 contara el ultimo borde. SOn 4 bordes en 3 columnas */
+        /* } */
+
+        /* .item-2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        } */
+
+        /* .item-1 {
+            grid-column: span 4;
+        }
+
+        .item-2 {
+            grid-column: span 3;
+        }
+
+        .item-3 {
+            grid-column: span 2;
+        } */
+
+        .col-xs-12 {
+            grid-column: span 12
+        }
+
+        .col-xs-11 {
+            grid-column: span 11;
+        }
+
+        .col-xs-10 {
+            grid-column: span 10
+        }
+
+        .col-xs-9 {
+            grid-column: span 9
+        }
+
+        .col-xs-8 {
+            grid-column: span 8
+        }
+
+        .col-xs-7 {
+            grid-column: span 7
+        }
+
+        .col-xs-6 {
+            grid-column: span 6
+        }
+
+        .col-xs-5 {
+            grid-column: span 5
+        }
+
+        .col-xs-4 {
+            grid-column: span 4
+        }
+
+        .col-xs-3 {
+            grid-column: span 3
+        }
+
+        .col-xs-2 {
+            grid-column: span 2
+        }
+
+        .col-xs-1 {
+            grid-column: span 1
+        }
+        
