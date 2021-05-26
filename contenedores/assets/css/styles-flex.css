@@ -1,0 +1,24 @@
+:root {
+  font-family: monospace;
+}
+
+.container {
+  border: 5px solid black;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 3rem;
+  /* Revisar reverse column height: 600px; */
+}
+
+.item {
+  box-sizing: border-box;
+  /* Incluira el width + border = 25% */
+  /* Sin box-sizing sera width = 25% + border, eso x4 es mas 100%  */
+  /* width: 25%; */
+  width: 15%;
+  border: 5px solid black;
+  background-color: coral;
+  color: white;
+}

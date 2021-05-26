@@ -9945,6 +9945,11 @@ body {
   background-position: 80%;
 }
 
+@media (min-width: 768px) {
+  .body {
+    padding-top: 0.1rem;
+  }
+}
 a:hover {
   color: peru;
 }
@@ -10025,6 +10030,11 @@ h6 {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .form__button {
+    padding-top: 0.1rem;
+  }
+}
 .button {
   padding: 0.7rem 2rem;
   border-radius: 3px;
@@ -10085,4 +10095,4 @@ h6 {
   background-color: white;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=main.css.map */
