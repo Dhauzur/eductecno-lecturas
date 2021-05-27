@@ -10,12 +10,10 @@
   font-weight: $bold;
 }
 
-/* Button Scheme */
 .button_primary {
   border: none;
   color: $white;
   background-color: $blue-bell;
-  /* Colores obtenidos de la hoja de estilos */
   &:hover {
     background-color: $pale-lavander;
   }

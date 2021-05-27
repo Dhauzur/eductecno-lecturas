@@ -9956,6 +9956,116 @@ img {
     margin: 0 auto;
   }
 }
+.user-info {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.user-info__summary {
+  padding-left: 0.8em;
+}
+.user-info__summary h2 {
+  margin: 0;
+}
+.user-info__summary p {
+  margin: 0;
+  font-size: 10px;
+  color: #bec1bb;
+}
+
+.navbar__icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__icon i {
+  align-self: center;
+  font-size: 1.2em;
+}
+
+/* Sobreescribir estilos vendor */
+.fa-comment-alt:before {
+  padding-right: 1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler {
+  padding: 5px 0;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+
+/* LAYOUT: SIDEBAR
+========================================================================
+== */
+/* Base */
+.sidebar {
+  border: 1px solid #e8ebe4;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid #e8ebe4;
+}
+
+.contact-menu__content > h3 {
+  font-size: 16px;
+}
+
+.user-info__summary > h2 {
+  font-size: 16px;
+}
+
+.contact-menu__buttton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+
+/* Menu item*/
+.contact-menu__item {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #e8ebe4;
+  padding: 1em;
+}
+
+.contact-menu__content h3 {
+  margin: 0;
+}
+.contact-menu__content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* LAYOUT: MAIN
+========================================================================
+== */
+/* Base */
+.main {
+  padding-top: 12em;
+  border-right: 1px solid #e8ebe4;
+}
+
+/* Message Dashboard */
+.message-dashboard {
+  text-align: center;
+}
+.message-dashboard img {
+  max-width: 40%;
+  padding-bottom: 1em;
+}
+.message-dashboard p {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.message-dashboard p span {
+  font-weight: 700;
+}
+
 /* COMPONENTS: BUTTONS
 ========================================================================
 == */
@@ -9968,18 +10078,34 @@ img {
   font-weight: 700;
 }
 
-/* Button Scheme */
 .button_primary {
   border: none;
   color: #fff;
   background-color: #a491d2;
-  /* Colores obtenidos de la hoja de estilos */
 }
 .button_primary:hover {
   background-color: #d4dcff;
 }
 .button_primary:focus {
   background-color: #bec1bb;
+}
+
+/* COMPONENTS: THUMBNAILS
+========================================================================
+== */
+/* Base */
+.thumbnail {
+  border: 1px solid #bec1bb;
+  border-radius: 50%;
+}
+
+/* Size */
+.thumbnail_tiny {
+  max-width: 50px;
+}
+
+.thumbnail_normal {
+  max-width: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

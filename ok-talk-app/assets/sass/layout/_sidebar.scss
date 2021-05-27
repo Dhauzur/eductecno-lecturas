@@ -1,0 +1,83 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.user-info__summary {
+  padding-left: 0.8em;
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: $x-small;
+    color: $gray;
+  }
+}
+
+.navbar__icon {
+  display: flex;
+  justify-content: flex-end;
+  i {
+    align-self: center;
+    font-size: 1.2em;
+  }
+}
+
+/* Sobreescribir estilos vendor */
+.fa-comment-alt:before {
+  padding-right: 1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar-toggler {
+  padding: 5px 0;
+}
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
+
+/* LAYOUT: SIDEBAR
+========================================================================
+== */
+/* Base */
+.sidebar {
+  border: 1px solid $platinum;
+}
+/* Header */
+.header {
+  border-bottom: 1px solid $platinum;
+}
+
+.contact-menu__content > h3 {
+  font-size: $medium;
+}
+
+.user-info__summary > h2 {
+  font-size: $medium;
+}
+
+.contact-menu__buttton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+
+/* Menu item*/
+.contact-menu__item {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid $platinum;
+  padding: 1em;
+}
+
+.contact-menu__content {
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: $small;
+  }
+}
