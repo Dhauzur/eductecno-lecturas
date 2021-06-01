@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Transiciones CSS</title>
+    <style>
+      .estrella {
+        fill: line;
+        stroke: blue;
+        stroke-width: 5;
+        transition: fill 2s, stroke 2s, transform 3s;
+        transition-delay: 3s;
+      }
+      .estrella:hover {
+        fill: red;
+        stroke: orange;
+        transform: scale(0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button type="button" class="button">Haz Click</button>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 53 53">
+      <style>
+        @keyframes opacidad {
+          0% {
+            /*opacity: 0; */
+            fill: rgb(243, 242, 236);
+          }
+          60% {
+            /*opacity: 0.5;*/
+            fill: rgb(243, 228, 144);
+          }
+          100% {
+            /*opacity: 1;*/
+            fill: gold;
+          }
+        }
+        .ampolla {
+          fill: #eee7c9;
+          /*transition: all 1s ease-in-out 3s;*/
+          animation: opacidad 3s ease-in-out;
+          animation-iteration-count: 3;
+          animation-direction: alternate;
+        }
+        .ampolla:hover {
+          fill: gold;
+        }
+        .reflejo {
+          fill: #eee7c9;
+        }
+        .casquillo {
+          fill: #556080;
+        }
+      </style>
+
+      <g class="lampara">
+        <g class="ampolla">
+          <path
+            d="M26.5 9c-8.8 0-16 7.2-16 16 0 7.1 4.6 13.1 11 15.2V50h2v3h6v-3h2v-9.8c6.4-2.1 11-8.1 11-15.2C42.5 16.2 35.3 9 26.5 9z"
+          />
+          <path
+            d="M26.5 0c-0.6 0-1 0.4-1 1v4c0 0.6 0.4 1 1 1s1-0.4 1-1V1C27.5 0.4 27.1 0 26.5 0z"
+          />
+          <path d="M50.5 24h-4c-0.6 0-1 0.4-1 1s0.4 1 1 1h4c0.6 0 1-0.4 1-1S51.1 24 50.5 24z" />
+          <path d="M6.5 24h-4c-0.6 0-1 0.4-1 1s0.4 1 1 1h4c0.6 0 1-0.4 1-1S7.1 24 6.5 24z" />
+          <path
+            d="M42.8 7.3l-2.8 2.8c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l2.8-2.8c0.4-0.4 0.4-1 0-1.4S43.2 6.9 42.8 7.3z"
+          />
+          <path
+            d="M11.7 38.4l-2.8 2.8c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l2.8-2.8c0.4-0.4 0.4-1 0-1.4S12 38 11.7 38.4z"
+          />
+          <path
+            d="M41.4 38.4c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4L41.4 38.4z"
+          />
+          <path
+            d="M10.2 7.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l2.8 2.8c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4L10.2 7.3z"
+          />
+        </g>
+        <path
+          d="M15.5 26c-0.6 0-1-0.4-1-1 0-6.6 5.4-12 12-12 0.6 0 1 0.4 1 1s-0.4 1-1 1c-5.5 0-10 4.5-10 10C16.5 25.6 16.1 26 15.5 26z"
+          class="reflejo"
+        />
+        <polygon
+          points="21.5 43 21.5 50 23.5 50 23.5 53 29.5 53 29.5 50 31.5 50 31.5 43 "
+          class="casquillo"
+        />
+      </g>
+    </svg>
+  </body>
+</html>
