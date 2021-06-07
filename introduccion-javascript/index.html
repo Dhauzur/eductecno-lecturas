@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var respuesta = prompt("Escribe un Número del 1 al 4")
+      //   switch (respuesta) {
+      //     case "1":
+      //       alert("Escribiste el número uno")
+      //       break
+      //     case "2":
+      //       alert("Escribiste el número dos")
+      //       break
+      //     case "3":
+      //       alert("Escribiste el número tres")
+      //       break
+      //     case "4":
+      //       alert("Escribiste el número cuatro")
+      //       break
+      //     default:
+      //       alert("No es un número entre 1 y 4")
+      //       break
+      //   }
+      //   var numero = 6
+      //   for (i = 1; i <= 10; i++) {
+      //     var resultado = numero * i
+      //     document.write(numero + " " + " x " + " " + i + " = " + resultado + "<br>")
+      //   }
+      //   var respuesta = 1
+      //   while (respuesta <= 10) {
+      //     respuesta = prompt("Escribe un Número del 1 al 10")
+      //     document.write(respuesta + "<br>") // imprimimos el valor de la variable
+      //   }
+      //   do {
+      //     var nombre = prompt("Ingresa tu nombre")
+      //   } while (!nombre)
+      //   document.write(nombre)
+      //   var acumulador = 0 // Los contadores por lo general se inician en 0
+      //   for (i = 1; i <= 100; i++) {
+      //     acumulador += i // es igual es escribir: acumulador = acumulador + i
+      //   }
+      //   alert(`La suma total acumulada de los números entre el 1 y 100 es: ${acumulador} `)
+      // var nombre = prompt("Ingrese su nombre: ") // declaramos una variable para que almacene el nombre del usuario.
+      // function saludo(a1 = "s/n", b1 = "s/a") {
+      //   console.log(Number.isInteger(a1))
+      //   if (typeof a1 == number) document.write("Este es un numero." + a1)
+      //   // concatenamos el saludo.
+      //   else document.write("¿Hola " + a1 + " " + b1 + " cómo estás?") // concatenamos el saludo.
+      // }
+
+      //FUNCIONES f1
+      var miVariable = 10 // variable global
+      function mifuncion() {
+        var miVariable = 5 // se declara una "nueva" variable local al usar ("var")
+        console.log(miVariable) // se muestra la variable en la consola
+      }
+      console.log(miVariable)
+      mifuncion() // se hace el llamado de la función
+      console.log(miVariable)
+
+      //FUNCIONES ANONIMAS f2
+      const laqueyoquiera = function () {
+        var miVariable = 5 // se declara una "nueva" variable local al usar ("var")
+        console.log(miVariable) // se muestra la variable en la consola
+      }
+      console.log(miVariable)
+      laqueyoquiera() // se hace el llamado de la función
+      console.log(miVariable)
+
+      //ARROW FUNCTION ES6 f3
+      const otroNombre = (a, b) => a + b
+
+      
+      console.log(miVariable)
+      console.log(otroNombre(1, 2))
+
+      // 10
+      // 5
+      // 10
+    </script>
+  </body>
+</html>
