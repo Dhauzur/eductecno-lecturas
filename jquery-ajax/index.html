@@ -9,8 +9,8 @@
     <h4>Información de la API</h4>
     <div>
       <button type="button">Mostrar Información</button>
-      <div class="resultado"></div>
-      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <div class="resultado" />
+      <div id="chartContainer" style="height: 300px; width: 100%;" />
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,31 +41,29 @@
         };
         console.log("PASO 2: PREVIO AL CLICK");
         $("button").on("click", function() {
-          console.log("PASO 4: CLICK BOTON");
+          console.log("PASO 3: CLICK BOTON");
           $.ajax({
             type: "GET",
             url: "https://mindicador.cl/api/dolar",
             dataType: "json",
             success: function(nuestrodato) {
               let datosApi = nuestrodato.serie;
-              console.log(datosApi);
-
               for (var i = 0; i < datosApi.length; i++)
                 dataPoints.push({
                   x: new Date(datosApi[i].fecha),
                   y: datosApi[i].valor
                 });
-              console.log("PASO 5: MI API ME RESPONDIO");
+              console.log("PASO 7 : CANVAS");
+              $("#chartContainer").CanvasJSChart(options);
+              console.log("PASO 4: MI API ME RESPONDIO");
             },
             error: function(error) {
               console.error(error);
-              console.log("PASO 6: :( ");
+              console.log("PASO 5: :( ");
             }
           });
-          console.log("CANVAS");
-          $("#chartContainer").CanvasJSChart(options);
         });
-        console.log("PASO 3: DSP DEL CLICK");
+        console.log("PASO 8: fin");
       });
     </script>
   </body>
