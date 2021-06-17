@@ -12,31 +12,34 @@ initial-scale=1.0"
   <body>
     <script>
       var pruebaVar = () => {
-        var num = 31;
+        num = 31;
         if (true) {
-          var num = 70;
-          console.log("1:" + num); // 71
+          num = 70;
+          console.log("1:" + num); // 70
         }
-        console.log("2:" + num); // 71
+        console.log("2:" + num); // 70
+        return "hola";
       };
 
       let pruebaLet = () => {
-        let num = 31;
+        console.log(num);
+        let numLet = 31;
         if (true) {
-          let num = 71;
-          console.log("3:" + num); // 71
+          let numLet = 71;
+          console.log("3:" + pruebaConst()); // 71
         }
-        console.log("4:" + num); // 31
+        console.log("4:" + numLet); // 31
       };
 
       const pruebaConst = () => {
         const num = 31;
         if (true) {
-          num = 71;
+          const num = 71;
           console.log("5:" + num); // 71
         }
         console.log("6:" + num); // 31
       };
+
       pruebaVar();
       pruebaLet();
       pruebaConst();
