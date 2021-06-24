@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<title>DESAFIO OBJETOS</title>
+</head>
+<body>
+    <div>
+      
+      <p>Ingrese los siguientes datos:</p>
+      
+      <table width="450" border="1">
+        <tbody>
+          <tr>
+            <td width="30%" >NOMBRE
+              </td>
+            <td> <input type="text" id="nombre_p"  width="30px"id="textfield">
+            </td>
+          </tr>
+          <tr>
+            <td>EDAD</td>
+            <td><input type="text" id="edad_p"  width="30px"id="textfield"></td>
+          </tr>
+          <tr>
+            <td>RUT</td>
+            <td><input type="text" id="rut_p"  width="30px"id="textfield"></td>
+          </tr>
+          <tr>
+            <td>DIAGNOSTICO</td>
+            <td><input type="text" id="diag_p"  width="30px"id="textfield"></td>
+          </tr>
+        </tbody>
+      </table>
+        <input type="button" name="button" id="bguardar" value="Guardar" onClick="guardar_pacientes();"><br> <br><br>
+        
+        <p> *** PROCESOS ***</p>
+        <p>_Si desea mostrar todos los pacientes ingresados presione el botón<input type="button" name="button" id="bmostrar" value="Mostrar Pacientes" onClick="mostrar_pacientes();"></p>
+        
+        
+        <p>_Si desea buscar a un paciente ingrese el nombre y presione botón</p>
+        <input type="text" id="nombre2_p"  width="30px"id="textfield"> <input type="button" name="button" id="bbuscar" value="Buscar Pacientes" onClick="buscar_pacientes();">
+        <p id="p_buscar"></p>
+    </div>
+
+<div id="div_mostrar" >
+
+</div>
+    <script src="script.js">
+    </script>
+
+</body>
+</html>
