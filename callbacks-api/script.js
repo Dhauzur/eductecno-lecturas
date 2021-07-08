@@ -9,7 +9,7 @@ const request = async url => {
 
 // bloque 3
 const getPosts = async id => {
-  const url = `${baseUrl}/posts?userId=${id}`;
+  const url = `${baseUrl}/psdfsdfsdsts?userId=${id}`;
   return request(url);
 };
 
@@ -24,6 +24,8 @@ const userId = 1;
 
 Promise.all([getUser(userId), getPosts(userId)])
   .then(resp => {
-    console.log("resp", resp);
+    console.log("(1) resp asincrona: ", resp);
   })
-  .catch(err => console.log("err", err));
+  .catch(err => console.log("err", err))
+  .finally(console.log("(2) Este mensaje aparece siempre"));
+console.log("(3) Dsp del finally");
