@@ -5,7 +5,10 @@
       {{ message }}
       <img :src="pathImage" />
       <input v-model="message" />
-      <HelloVue v-if="checked" />
+      <HelloVue
+        :message1="' (Soy un comp. hijo)'"
+        @eventoDelHijo="metodoDelPadre"
+      />
       <input type="checkbox" id="checkbox" v-model="checked" />
       {{ checked }}
       <ul>
@@ -36,6 +39,10 @@ export default {
     };
   },
   methods: {
+    metodoDelPadre() {
+      console.log("Evento del hijo controlado");
+      this.checked = !this.checked;
+    },
     mostrarComponente() {
       console.log("Soy un metodo");
       this.mostrar = !this.mostrar;
