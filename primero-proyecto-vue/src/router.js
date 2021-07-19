@@ -5,19 +5,21 @@ import Inicio from "./components/HelloWorld";
 import Contacto from "./components/Contacto";
 import Ecamp from "./components/Ecamp";
 import Blog from "./components/Blog";
-
+import Comentarios from "./components/Comentarios";
+import NotFound from "./components/NotFound";
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/HelloWorld",
+      path: "/Hello*",
       component: Inicio
     },
     {
       path: "/contacto",
-      component: Contacto
+      component: Contacto,
+      name: "contacto"
     },
     {
       path: "/ecamp",
@@ -25,7 +27,18 @@ export default new Router({
     },
     {
       path: "/blog/:entrada",
-      component: Blog
+      component: Blog,
+      children: [
+        {
+          component: Comentarios,
+          path: "/comentarios/:user",
+          name: "comentarios"
+        }
+      ]
+    },
+    {
+      path: "*",
+      component: NotFound
     }
   ]
 });

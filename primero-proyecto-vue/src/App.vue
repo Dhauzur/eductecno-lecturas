@@ -3,7 +3,7 @@
     <nav>
       <router-link to="/">Inicio</router-link> |
       <router-link to="/HelloWorld">Hello World</router-link> |
-      <router-link to="/contacto">Contacto</router-link> |
+      <router-link :to="{ name: 'contacto' }">Contacto</router-link> |
       <router-link to="/ecamp">Viajar al ecamp</router-link> |
       <router-link to="/blog/1">Blog</router-link> |
     </nav>

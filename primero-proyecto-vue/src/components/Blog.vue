@@ -1,8 +1,15 @@
 <template>
   <div class="border">
     <h1 v-text="tituloEntrada"></h1>
-    <router-link :to="paginar(false)">Anterior</router-link>|
-    <router-link :to="paginar(true)">Siguiente</router-link>
+    <router-link :to="paginar(false)">Anterior</router-link> |
+    <router-link :to="paginar(true)">Siguiente</router-link> |
+    <router-link :to="{ name: 'comentarios', params: { user: '1' } }"
+      >Comentarios x obj</router-link
+    >
+    |
+    <router-link to="/comentarios/2">Comentarios x ruta</router-link>
+    |
+    <router-view></router-view>
   </div>
 </template>
 <script>
