@@ -1,0 +1,33 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<div id="app">
+  <p>
+    <router-link to="/inicio">Inicio</router-link>
+    <router-link to="/contacto">Contacto</router-link>
+  </p>
+  <h1>Mi sitio con Vue Router</h1>
+  <h2>Subtituli</h2>
+  <router-view></router-view>
+</div>
+
+<script type="text/javascript">
+  //PASO 0
+  const Inicio = { template: "<div>Vista de Inicio</div>" };
+  const Contacto = { template: "<div>Vista de Contacto</div>" };
+
+  //PASO 1: Declarar rutas hacia componentes especificos
+  const routes = [
+    { path: "/inicio", component: Inicio },
+    { path: "/contacto", component: Contacto }
+  ];
+
+  //PASO 2: Instanciar VUe rotuer
+  const router = new VueRouter({
+    routes
+  });
+
+  //PASO 3: Registrar vue router
+  const app = new Vue({
+    router
+  }).$mount("#app");
+</script>

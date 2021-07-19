@@ -1,18 +1,24 @@
 <template>
   <div id="app">
+    <nav>
+      <router-link to="/">Inicio</router-link> |
+      <router-link to="/HelloWorld">Hello World</router-link> |
+      <router-link to="/contacto">Contacto</router-link> |
+      <router-link to="/ecamp">Viajar al ecamp</router-link>
+    </nav>
+
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Bievenidos alumnos" />
+    <!-- <HelloWorld msg="Bievenidos alumnos" /> -->
+    <!-- Como el espacio en nuestra pagina, que va  mostrar la naveegcion de componentes -->
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
+  name: "App"
 };
 </script>
 

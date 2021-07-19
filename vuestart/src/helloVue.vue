@@ -15,10 +15,15 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      llorar: "hola papa"
+    };
+  },
   methods: {
     clickResponse(event) {
       //sentencias, condicion, iteracion x cada, emito un evento ,etc
-      this.$emit("eventoDelHijo", "Soy info de un hijo");
+      this.$emit("MePongoALlorar", llorar);
     }
   }
 };

@@ -5,23 +5,40 @@
     <div v-if="mostrar">
       {{ message }}
       <img :src="pathImage" />
-      <input v-model="message" />
       <HelloVue
         :message1="' (Soy un comp. hijo)'"
-        @eventoDelHijo="metodoDelPadre"
+        @MePongoALlorar="comprarJuguete"
       />
-      <input type="checkbox" id="checkbox" v-model="checked" />
-      {{ checked }}
+      <!-- @ presencia de un evento      -->
+      <input type="text" v-model="message" />
+      <input type="checkbox" v-model="checked" />
+
       <ul>
         <li v-for="(fruta, index) in frutas">
+          <!-- oye tbm me puedes mandar mi css, mediante un objeto... y ese obj puede ser un;
+           variable computed,
+           una props
+           una variable
+         -->
+          <!-- este objeto se escribe { color: 'red', 'font-size': '12px !important;' } -->
+          <!-- class binding - clase reactiva -->
+          <!-- :class="{ propiedadNombreClase: seraIngresadaSiempreYCuandoLaCondicionSeaVerdadera }" -->
           <span
+            style="font-size: 12px; color: red;"
             :style="[frutaUnica, borderFruta]"
+            class="mi-clase-rojo"
             :class="{ rayado: fruta.comprado && checked }"
             @click="eliminarFruta(index)"
             >{{ fruta.name }}</span
           >
         </li>
       </ul>
+    </div>
+    <div v-else-if="mostrar == undefined">
+      Yo necesito estar debajo de mi IF <3
+    </div>
+    <div v-else>
+      Ultimo caso
     </div>
   </div>
 </template>
@@ -36,13 +53,10 @@ export default {
   },
   data() {
     return {
-      frutaUnica: {
-        "font-size": "12px",
-        color: "red !important"
-      },
       borderFruta: {
         "border-bottom": "2px solid black"
       },
+      unaNuevaVariable: "blue",
       checked: true,
       frutas: [
         { name: "Frutillas", comprado: true },
@@ -56,6 +70,11 @@ export default {
     };
   },
   computed: {
+    frutaUnica() {
+      if (this.checked) return { "font-size": "12px", color: "red !important" };
+      else
+        return { "font-size": "10px", color: unaNuevaVariable + " !important" };
+    },
     cantidadDeFrutas() {
       if (this.checked)
         return (
@@ -85,12 +104,16 @@ export default {
   },
   methods: {
     eliminarFruta() {},
-    metodoDelPadre() {
-      console.log("Evento del hijo controlado");
+    comprarJuguete() {
+      console.log("Evento del hijo super bien criado ");
       this.checked = !this.checked;
       this.frutas.push({ name: "NuevaFruta", comprado: true });
     },
     mostrarComponente() {
+      //FETCH  de superheroes
+      // data de la api
+      // modificamos el objeto descargado
+      this.pathImage = "https://ruta.com/superhero/10";
       console.log("Soy un metodo");
       this.mostrar = !this.mostrar;
     }
