@@ -1,0 +1,32 @@
+<template>
+  <div class="border">
+    <h1 v-text="tituloEntrada"></h1>
+    <router-link :to="paginar(false)">Anterior</router-link>|
+    <router-link :to="paginar(true)">Siguiente</router-link>
+  </div>
+</template>
+<script>
+export default {
+  methods: {
+    paginar(siguiente) {
+      let entrada = parseInt(this.$route.params.entrada);
+      if (siguiente)
+        return entrada < 10 ? `/blog/${entrada + 1}` : `/blog/${entrada}`;
+      else return entrada > 1 ? `/blog/${entrada - 1}` : `/blog/${entrada}`;
+    }
+  },
+  computed: {
+    tituloEntrada() {
+      return `Entrada ${this.$route.params.entrada} del Blog`;
+    }
+  }
+};
+</script>
+
+<style>
+.border {
+  border: 1px solid blue;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+</style>

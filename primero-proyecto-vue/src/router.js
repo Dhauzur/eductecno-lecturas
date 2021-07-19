@@ -4,6 +4,7 @@ import Router from "vue-router";
 import Inicio from "./components/HelloWorld";
 import Contacto from "./components/Contacto";
 import Ecamp from "./components/Ecamp";
+import Blog from "./components/Blog";
 
 Vue.use(Router);
 
@@ -21,6 +22,10 @@ export default new Router({
     {
       path: "/ecamp",
       component: Ecamp
+    },
+    {
+      path: "/blog/:entrada",
+      component: Blog
     }
   ]
 });
