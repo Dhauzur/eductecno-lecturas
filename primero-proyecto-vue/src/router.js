@@ -7,6 +7,8 @@ import Ecamp from "./components/Ecamp";
 import Blog from "./components/Blog";
 import Comentarios from "./components/Comentarios";
 import NotFound from "./components/NotFound";
+import Cliente from "./components/Cliente";
+
 Vue.use(Router);
 
 export default new Router({
@@ -35,6 +37,12 @@ export default new Router({
           name: "comentarios"
         }
       ]
+    },
+    {
+      path: "/cliente/:cliente",
+      component: Cliente,
+      name: "cliente",
+      props: true
     },
     {
       path: "*",

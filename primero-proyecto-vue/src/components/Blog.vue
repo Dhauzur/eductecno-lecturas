@@ -14,6 +14,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      entrada: null
+    };
+  },
   methods: {
     paginar(siguiente) {
       let entrada = parseInt(this.$route.params.entrada);
@@ -22,9 +27,12 @@ export default {
       else return entrada > 1 ? `/blog/${entrada - 1}` : `/blog/${entrada}`;
     }
   },
+  mounted() {
+    this.entrada = this.$route.params.entrada;
+  },
   computed: {
     tituloEntrada() {
-      return `Entrada ${this.$route.params.entrada} del Blog`;
+      return `Entrada ${this.entrada} del Blog`;
     }
   }
 };
