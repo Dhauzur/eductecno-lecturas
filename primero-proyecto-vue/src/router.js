@@ -40,9 +40,12 @@ export default new Router({
     },
     {
       path: "/cliente/:cliente",
+
       component: Cliente,
       name: "cliente",
-      props: true
+      props: route => ({
+        cliente: `${route.params.cliente} S.A`
+      })
     },
     {
       path: "*",
