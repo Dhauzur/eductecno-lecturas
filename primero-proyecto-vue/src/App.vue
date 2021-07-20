@@ -6,6 +6,7 @@
       <router-link :to="{ name: 'contacto' }">Contacto</router-link> |
       <router-link to="/ecamp">Viajar al ecamp</router-link> |
       <router-link to="/blog/1">Blog</router-link> |
+      <router-link to="/Demo">Demo</router-link> |
       <router-link :to="{ name: 'cliente', params: { cliente: 'mauro' } }"
         >Cliente</router-link
       >
@@ -15,7 +16,10 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Bievenidos alumnos" /> -->
     <!-- Como el espacio en nuestra pagina, que va  mostrar la naveegcion de componentes -->
+
+    <!-- <transition name="mi-transicion"> -->
     <router-view />
+    <!-- </transition> -->
   </div>
 </template>
 
