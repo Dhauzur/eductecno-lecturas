@@ -12,6 +12,9 @@ import ContactoNuevo from "./components/ContactoNuevo";
 import Demo from "./components/Demo";
 import Servicio from "./components/Servicio";
 
+const LazyLoading = () => import("./components/LazyLoading");
+// import LazyLoading from "./components/LazyLoading";
+
 Vue.use(Router);
 
 export default new Router({
@@ -26,6 +29,18 @@ export default new Router({
           path: "",
           component: Servicio,
           name: "Servicio"
+        }
+      ]
+    },
+    {
+      path: "/",
+      component: Inicio,
+      children: [
+        {
+          path: "",
+          components: {
+            lazyloading: LazyLoading
+          }
         }
       ]
     },
