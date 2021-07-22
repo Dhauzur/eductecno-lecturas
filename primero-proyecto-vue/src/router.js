@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Inicio from "./components/HelloWorld";
+import Inicio from "./components/Inicio";
 import Contacto from "./components/Contacto";
 import Ecamp from "./components/Ecamp";
 import Blog from "./components/Blog";
